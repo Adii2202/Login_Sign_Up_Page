@@ -43,7 +43,6 @@ const LoginRegister = () => {
     console.log("Login form submitted");
   };
 
-  // 0 - initial 1-processing 2-done
   const registerDataChange = (e) => {
     if (e.target.name === "avatar") {
       const reader = new FileReader();
@@ -60,25 +59,7 @@ const LoginRegister = () => {
       setUser({ ...user, [e.target.name]: e.target.value });
     }
   };
-
-  //   const location = useLocation();
-
-  //   const redirect = location.search ? location.search.split("=")[1] : "/account";
-  //   useEffect(() => {
-  //     if (error) {
-  //       toast.error(error);
-  //       dispatch({ type: "clearError" });
-  //     }
-  //     if (isAuthenticated) {
-  //       // console.log(redirect);
-  //       if (redirect === "shipping") {
-  //         navigate("/shipping");
-  //       } else {
-  //         navigate("/account");
-  //       }
-  //     }
-  //   }, [dispatch, error, navigate, isAuthenticated, redirect]);
-
+  
   const switchTabs = (e, tab) => {
     if (tab === "login") {
       switcherTab.current.classList.add("shiftToNeutral");
